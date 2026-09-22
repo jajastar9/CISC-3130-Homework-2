@@ -1,0 +1,10 @@
+    Bubble Sort Big O
+    
+    Question 1
+    Worst case Big O time complexity of Bubble Sort is O(n^2)
+    
+    Question 2
+    Bubble Sort has this time complexity due to it being a nested loop. Elements are sorted one at a time, and every cycle of sorting an element requires it to go through every single element that has yet to be sorted. In essence, each additional element adds a new cycle, as well as increasing the length of every cycle by 1.
+    
+    Question 3
+    Sorting 10 elements with Bubble Sort would be 55, while sorting 1,000 elements is 500500, which is 9,100 times more comparisons.
