@@ -8,3 +8,29 @@
     
     Question 3
     Sorting 10 elements with Bubble Sort would be 55, while sorting 1,000 elements is 500500, which is 9,100 times more comparisons.
+
+    Question 4
+    O(n log(n))
+
+    Question 5
+    Merge Sort. As the algorithm expands, it follows an almost linear growth instead of the exponential growth that Bubble Sort follows.
+
+    Question 6
+    Complete the following:
+    Bubble Sort = O(n^2)
+    Merge Sort = O(n log(n))
+
+    Question 7
+    O(n). Worst case scenario it must go through each and every element, with a new element adding 1 more cycle to the search.
+
+    Question 8
+    O(log n). Constant division of the list limits the amount of searching needed significantly, meaning new elements will add a miniscue amount to the time needed.
+
+    Question 9
+    Binary searches require a sorted list because of it's nature, finding the centre of the data set and determining where the target must be located based on it's value. Without a sorted list the algorithm would fail.
+
+    Question 10
+    Linear search. It's the only option.
+
+    Question 11
+    A binary search would be more ideal for a large sorted array. The size of the algorithm has minimal impact on the runtime of the operation, and the list being sorted fulfils the requirement it has for running a binary search.

@@ -1,8 +1,8 @@
-public class Sorters {
+public class SnS { //sorts and searches
     
     private int[] arr;
 
-    public Sorters(){
+    public SnS(){
         arr = new int[12];
         for (int i = 0; i < arr.length; i++) {
             int tempInt = (int) (Math.random() * 100);
@@ -27,9 +27,9 @@ public class Sorters {
 
     //bubble sort
     public int[] bubbleSort(){
-        int [] tempArr = arr.clone();
-        for (int i = 0; i < tempArr.length - 1; i++) {
-            for (int j = 0; j < tempArr.length - i - 1; j++) {
+        int [] tempArr = arr.clone(); 
+        for (int i = 0; i < tempArr.length - 1; i++) { //every element
+            for (int j = 0; j < tempArr.length - i - 1; j++) { //cutoff at the endd due to it sequentially finding the largest element and moving it right
                 if (tempArr[j] > tempArr[j + 1]) {
                     int temp = tempArr[j];
                     tempArr[j] = tempArr[j + 1];
@@ -92,10 +92,46 @@ public class Sorters {
 
     //actual merge sort
     public int[] mergeSort(){
-        int[] tempArr = arr.clone();
-
-
+        int[] tempArr = arr.clone(); //do not want original modified
         mergeSplit(tempArr, 0, tempArr.length - 1);
         return tempArr;
+    }
+
+    //linear search
+    public int linearSearch(int t){
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == t) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public String searchToString(int t){
+        if (t != -1) {
+            return "Element found at index: " + t;
+        } else {
+            return "Element not found";
+        }
+    }
+
+    //binary search
+    public int binarySearch(int[] tempArr, int t){
+        int left = 0;
+        int right = tempArr.length - 1;
+        int mid;
+        while (left <= right) {
+            mid = left + (right - left) / 2;
+            if (tempArr[mid] == t) {
+                return mid;
+            }
+            if (tempArr[mid] > t) {
+                right = mid - 1;
+            }
+            if (tempArr[mid] < t) {
+                left = mid + 1;
+            }
+        }
+        return -1;
     }
 }
